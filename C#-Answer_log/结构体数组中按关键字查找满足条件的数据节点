@@ -1,4 +1,35 @@
+题目要求：
+struct student
+{
+int num ;
 
+char name[20];
+
+int score;
+};
+typedef struct student stu;
+
+有上面面学生记录类型定义，
+定义函数在一组学生记录中找成绩最低的学生信息，
+最低分唯一
+输入样例：
+在这里给出一组输入。例如：
+
+1 a01 62
+2 a02 56
+3 a03 77
+4 aaa 66
+5 bbb 78
+11 a01 62
+12 a02 57
+13 a03 77
+14 aaa 96
+15 bbb 78
+输出样例：
+在这里给出相应的输出。例如：
+
+2 a02 56
+--------------------------------------------------------------------分割线---------------------------------------------------------------------------
 #include <stdio.h>
 #define N  10
 stu fun( stu  a[] )；
@@ -18,7 +49,7 @@ printf("%d %s %d",min.num,,min.name,min.score);
 stu fun( stu  a[] )
 {
     int i,j,k,min_score=a[0].score,min_num;
-    char *name[1],str2[3];
+    char *name[1],str2[3];              
     stu min;
     for(i=0;i<N;i++)
         if(min_score>=a[i].score)
