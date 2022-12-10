@@ -1,0 +1,36 @@
+
+#include <stdio.h>
+#define N  10
+stu fun( stu  a[] )；
+
+int main()
+{
+    stu a[N], min;
+    int i;
+    for (i=0;i<N;i++)
+        scanf("%d%s%d",&a[i].num,a[i].name,&a[i].score);
+    min=fun(a);
+printf("%d %s %d",min.num,,min.name,min.score);
+}
+
+
+/* 请在这里填写答案 */
+stu fun( stu  a[] )
+{
+    int i,j,k,min_score=a[0].score,min_num;
+    char *name[1],str2[3];
+    stu min;
+    for(i=0;i<N;i++)
+        if(min_score>=a[i].score)
+        {
+            min_score=a[i].score;
+            *name = a[i].name;
+            min_num = a[i].num;
+        }
+    char **str1=&name[0];
+    for(i=0;i<3;i++)
+        min.name[i]=*(*(str1+0)+i);
+    min.score = min_score;
+    min.num=min_num;
+    return min;
+}
